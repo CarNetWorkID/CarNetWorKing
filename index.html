@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car.Networking ID</title>
+    <link rel="icon" href="logo.jpeg" type="image/jpeg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #222;
+            padding: 20px 10px;
+        }
+        header img {
+            width: 120px;
+            height: auto;
+        }
+        h1 {
+            margin: 10px 0 5px;
+            font-size: 2em;
+        }
+        p {
+            margin: 0 0 20px;
+            color: #ccc;
+        }
+        .form-container {
+            padding: 20px;
+            background: #111;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+        input, textarea {
+            background: #222;
+            color: #fff;
+        }
+        button {
+            background: #f0b400;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        footer {
+            margin-top: 30px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpeg" alt="CarNetworking Logo">
+        <h1>Car.Networking ID</h1>
+        <p>Layanan Internet Cepat & Terpercaya</p>
+    </header>
+    <div class="form-container">
+        <h2>Hubungi Kami</h2>
+        <form id="waForm">
+            <input type="text" id="nama" placeholder="Nama Anda" required>
+            <input type="text" id="alamat" placeholder="Alamat Anda" required>
+            <textarea id="pesan" placeholder="Pesan Anda" rows="4" required></textarea>
+            <button type="submit">Kirim ke WhatsApp</button>
+        </form>
+    </div>
+    <footer>
+        <p>© 2025 Car.Networking ID</p>
+    </footer>
+
+    <script>
+        document.getElementById("waForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+            var pesan = document.getElementById("pesan").value;
+            var nomorWA = "6281234567890"; // Ganti dengan nomor WA kamu
+
+            var url = "https://wa.me/" + nomorWA + "?text=" +
+                      "*Nama:* " + nama + "%0A" +
+                      "*Alamat:* " + alamat + "%0A" +
+                      "*Pesan:* " + pesan;
+            window.open(url, "_blank");
+        });
+    </script>
+</body>
+</html>
